@@ -47,16 +47,21 @@ public class ShoppingCart
     //TODO 2b) Complete the getter method getTotalPrice. Remember the getter should not print anything.
 
 
-    public int getCartLength()
+
+
+    // ************************UNCOMMENT OUT ALL THE STUFF BELOW****************************
+
+
+   /* public int getCartLength()
     {
         return cart.length;
     }
 
 
-    /**
+    *//**
      *
      * @return the contents of the cart together with summary information
-     */
+     *//*
     public String toString()
     {
 	NumberFormat fmt = NumberFormat.getCurrencyInstance();
@@ -77,6 +82,6 @@ public class ShoppingCart
 	contents += "\n";
 
 	return contents;
-    }
+    }*/
 
 }

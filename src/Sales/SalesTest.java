@@ -1,3 +1,6 @@
+
+/*
+
 package Sales;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -41,6 +44,7 @@ class SalesTest
         assertEquals(5, Sales.indexOfMax(new int[] {33,14,10,-23,0, 56}));
     }
 
+
     //TODO 3c) Uncomment the following lines to test the indexOfMin method
 //    @org.junit.jupiter.api.Test
 //    void indexOfMin()
@@ -58,3 +62,5 @@ class SalesTest
 
 
 }
+
+*/
