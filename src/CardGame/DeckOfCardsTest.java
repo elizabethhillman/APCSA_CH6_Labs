@@ -1,9 +1,9 @@
 package CardGame;
 
 /**
- * Name:
- * Date:
- * Period:
+ * Name: Elizabeth Hillman
+ * Date: 10/26
+ * Period: 1
  *
  * CardGame.DeckOfCardsTest.java
  *
