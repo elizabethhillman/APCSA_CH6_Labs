@@ -44,7 +44,7 @@ public class Sales
         sum = 0;
         for (int i=0; i < sales.length; i++)
         {
-            System.out.println("\t " + i + "\t\t\t" + sales[i]);
+            System.out.println("\t " + (i+1) + "\t\t\t" + sales[i]);
             sum += sales[i];
         }
 
@@ -55,13 +55,13 @@ public class Sales
         System.out.println("The average of the numbers in the array is " + average(sales));
 
         // Use your indexOfMax method to print the index of the best sales person
-        System.out.println("The person with the highest sales is Salesperson: #" + indexOfMax(sales));
+        System.out.println("The person with the highest sales is Salesperson: #" + (indexOfMax(sales)+1));
         // and the sales amount for that sales person.
         System.out.println("They sold " + sales[indexOfMax(sales)] + " units.");
 
 
         // Do the same for the worst sales person
-        System.out.println("The person with the lowest sales is Salesperson: #" + indexOfMin(sales));
+        System.out.println("The person with the lowest sales is Salesperson: #" + (indexOfMin(sales)+1));
         System.out.println("They sold " + sales[indexOfMin(sales)] + " units.");
 
     }

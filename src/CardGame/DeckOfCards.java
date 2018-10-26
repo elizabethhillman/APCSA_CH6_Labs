@@ -17,22 +17,19 @@ public class DeckOfCards {
     private final int NUMBER_OF_CARDS = 52;
     private String faces[] = {"Ace", "Deuce", "Three", "Four", "Five", "Six",
             "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+    private int values[] = {0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
     private String suits[] = { "Hearts", "Diamonds", "Clubs", "Spades" };
 
-    /**
-     * Constructor fills a deck array with Card objects.
-     */
     public DeckOfCards()
     {
-
         deck = new Card[ NUMBER_OF_CARDS ];
         currentCard = 0; // set currentCard so first Card dealt is deck[0]
+// populate deck with Card objects
+        for(int count = 0; count < deck.length; count++)
+            deck [ count ] = new Card(faces[count % 13], suits [count / 13], values [count % 13]);
 
-        // populate deck with Card objects
-        for (int count = 0; count < deck.length; count ++)
-            deck [ count ] = new Card(faces[count % 13], suits [count / 13]);
+        } // end DeckOfCards constructor
 
-    } // end DeckOfCards constructor
 
     /**
      * Shuffle deck of Cards by randomly switching all cards in deck.

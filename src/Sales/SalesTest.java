@@ -1,5 +1,5 @@
 
-/*
+
 
 package Sales;
 
@@ -45,22 +45,22 @@ class SalesTest
     }
 
 
-    //TODO 3c) Uncomment the following lines to test the indexOfMin method
-//    @org.junit.jupiter.api.Test
-//    void indexOfMin()
-//    {
-//        assertEquals(4, Sales.indexOfMin(new int[] {3,4,1,23,0}));
-//        assertEquals(3, Sales.indexOfMin(new int[] {33,14,10,-23,0}));
-//    }
-//
-//    @org.junit.jupiter.api.Test
-//    void indexOfMinOtherLengths()
-//    {
-//        assertEquals(2, Sales.indexOfMin(new int[] {3,23,0}));
-//        assertEquals(3, Sales.indexOfMin(new int[] {33,14,10,-23,0, 56}));
-//    }
+    //Uncomment the following lines to test the indexOfMin method
+    @org.junit.jupiter.api.Test
+   void indexOfMin()
+    {
+        assertEquals(4, Sales.indexOfMin(new int[] {3,4,1,23,0}));
+        assertEquals(3, Sales.indexOfMin(new int[] {33,14,10,-23,0}));
+    }
+
+    @org.junit.jupiter.api.Test
+    void indexOfMinOtherLengths()
+    {
+        assertEquals(2, Sales.indexOfMin(new int[] {3,23,0}));
+        assertEquals(3, Sales.indexOfMin(new int[] {33,14,10,-23,0, 56}));
+    }
 
 
 }
 
-*/
+
