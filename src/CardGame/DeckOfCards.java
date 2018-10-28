@@ -15,9 +15,9 @@ public class DeckOfCards {
     private Card deck[];
     private int currentCard;
     private final int NUMBER_OF_CARDS = 52;
-    private String faces[] = {"Ace", "Deuce", "Three", "Four", "Five", "Six",
+    private String faces[] = {"Ace", "Two", "Three", "Four", "Five", "Six",
             "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
-    private int values[] = {0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
+    public static int values[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10};
     private String suits[] = { "Hearts", "Diamonds", "Clubs", "Spades" };
 
     public DeckOfCards()
@@ -60,6 +60,7 @@ public class DeckOfCards {
         else
             return null; // return null to indicate no more cards
     }
+
   
 }
 
