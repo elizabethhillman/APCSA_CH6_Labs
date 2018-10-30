@@ -36,7 +36,7 @@ public class Card
         return suit;
     }
 
-    public int getValue() { return value;}
+    public int getValue() { return value; }
 }
 
 

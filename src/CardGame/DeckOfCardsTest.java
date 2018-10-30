@@ -42,6 +42,9 @@ public class DeckOfCardsTest {
 
         System.out.println("Dealer's hand: ");
         Card d = myDeckOfCards.dealCard();
+        if(d.getFace().equals("Ace")  && totalValue < 11){
+            dealerValue += 10;
+        }
         System.out.println(d.toString());
         System.out.println();
 
@@ -55,16 +58,17 @@ public class DeckOfCardsTest {
             //DeckOfCards.values[0] = 11;
             totalValue += 10;
         }
-        if (totalValue == 21)
-        {
-            rep = "blackjack";
-            System.out.println("Player wins!");
-        }
+
         System.out.println(x.toString());
         totalValue += x.getValue();
         System.out.println(y.toString());
         totalValue += y.getValue();
         System.out.println("Total value: " + totalValue);
+        if (totalValue == 21)
+        {
+            rep = "blackjack";
+            System.out.println("Player wins!");
+        }
 
         String s = (x.toString() + "\n" + y.toString());
 
@@ -85,12 +89,16 @@ public class DeckOfCardsTest {
             System.out.println("Player's hand: ");
             Card t = myDeckOfCards.dealCard();
             s += "\n" + t.toString();
+
             if(t.getFace().equals("Ace") && totalValue < 11){
                 totalValue += 10;
             }
 
             System.out.println(s);
             totalValue += t.getValue();
+            if((x.getFace().equals("Ace")|| y.getFace().equals("Ace") || t.getFace().equals("Ace")) && totalValue > 16){
+                totalValue -= 10;
+            }
             System.out.println("Total value: " + totalValue);
 
             if(totalValue == 21){
@@ -112,13 +120,16 @@ public class DeckOfCardsTest {
             r = scan.nextLine();
             System.out.println();
         }
-
-        if(r.equalsIgnoreCase("stay") || r.equalsIgnoreCase("s")){
+        if (r.equalsIgnoreCase("stay") || r.equalsIgnoreCase("s")) {
             System.out.println("Dealer's hand: ");
             System.out.println(d.toString());
             Card d1 = myDeckOfCards.dealCard();
+            if(d1.getFace().equals("Ace") && totalValue < 11){
+                //DeckOfCards.values[0] = 11;
+                dealerValue += 10;
+            }
             System.out.println(d1.toString());
-            dealerValue+= d.getValue() + d1.getValue();
+            dealerValue += d.getValue() + d1.getValue();
             System.out.println("Dealer's total: " + dealerValue);
             System.out.println();
             System.out.println("Player's hand: ");
@@ -128,8 +139,16 @@ public class DeckOfCardsTest {
 
             String dealer = (d.toString() + "\n" + d1.toString());
 
-            if(dealerValue<18 && dealerValue != 17){
+            if (dealerValue < 18 && dealerValue != 17) {
                 Card dealerCard = myDeckOfCards.dealCard();
+
+                if (dealerCard.getFace().equals("Ace") && totalValue < 11) {
+                    dealerValue += 10;
+                }
+                if ((d.getFace().equals("Ace") || d1.getFace().equals("Ace")) && dealerValue > 11) {
+                    dealerValue -= 10;
+
+                }
                 dealer += "\n" + dealerCard.toString();
                 dealerValue += dealerCard.getValue();
                 System.out.println("Dealer's hand: ");
@@ -141,7 +160,7 @@ public class DeckOfCardsTest {
                 System.out.println("Total value: " + totalValue);
                 System.out.println();
             }
-            if(dealerValue<18 && dealerValue != 17){
+            if (dealerValue < 18 && dealerValue != 17) {
                 Card dealerCard2 = myDeckOfCards.dealCard();
                 dealer += "\n" + dealerCard2.toString();
                 dealerValue += dealerCard2.getValue();
@@ -155,17 +174,18 @@ public class DeckOfCardsTest {
                 System.out.println();
 
             }
-            if(dealerValue == 21){
+            if (dealerValue == 21) {
                 dealerRep = "blackjack";
                 System.out.println("Dealer wins!");
 
             }
-            if(dealerValue>21){
+            if (dealerValue > 21) {
                 dealerRep = "bust";
                 System.out.println("Dealer busts!");
                 System.out.println("Player wins!");
             }
         }
+
 
 
     if(dealerValue > totalValue && dealerRep != "bust" && dealerRep != "blackjack" ){
