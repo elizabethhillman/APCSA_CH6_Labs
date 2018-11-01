@@ -67,7 +67,7 @@ public class DeckOfCardsTest {
         if (y.getFace().equals("Ace") && (totalValue + 11) > 21) {
             totalValue += 1;
         }
-        else if(y.getFace().equals("Ace") && (totalValue + 11) < 21){
+        else if(y.getFace().equals("Ace") && (totalValue + 11) < 22){
                 totalValue += 11;
             }
 
@@ -106,7 +106,7 @@ public class DeckOfCardsTest {
 
             if (t.getFace().equals("Ace") && (totalValue + 11) > 21) {
                 totalValue += 1;
-            } else if (t.getFace().equals("Ace") && (totalValue + 11) < 21) {
+            } else if (t.getFace().equals("Ace") && (totalValue + 11) < 22) {
                 totalValue += 11;
             }
 
@@ -115,7 +115,11 @@ public class DeckOfCardsTest {
                     totalValue -= 10;
                 }
             }
-
+            //if (counter == 4) {
+            //    if ((x.getFace().equals("Ace") || y.getFace().equals("Ace")) && (totalValue + t.getValue()) > 21) {
+            //        totalValue -= 10;
+            //    }
+            //}
 
 
 
@@ -152,7 +156,7 @@ public class DeckOfCardsTest {
             if (d1.getFace().equals("Ace") && (dealerValue + 11) > 21) {
                     dealerValue += 1;
             }
-            else if (d1.getFace().equals("Ace") && (dealerValue + 11) < 21){
+            else if (d1.getFace().equals("Ace") && (dealerValue + 11) < 22){
                 dealerValue += 11;
             }
 
@@ -173,7 +177,7 @@ public class DeckOfCardsTest {
                 if (dealerCard.getFace().equals("Ace") && (dealerValue + 11) > 21) {
                         dealerValue += 1;
                 }
-                else if (dealerCard.getFace().equals("Ace") && (dealerValue + 11) < 21) {
+                else if (dealerCard.getFace().equals("Ace") && (dealerValue + 11) < 22) {
                     dealerValue += 11;
                 }
 
